@@ -24,7 +24,6 @@ export class EvenComponent implements OnInit, OnDestroy {
     this.evenNumbers = [];
     this.subscription = this.emitter.subscribe((event) => {
       if(event % 2 === 0)
-        //this.renderer.setStyle(this.elRef, 'innerHtml', event);
         this.evenNumbers.push(event);
     })
   }
