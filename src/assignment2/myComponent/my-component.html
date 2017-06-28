@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-xs-12">
+
+    <p>
+      Username:
+      <input type="text" [(ngModel)]="username">
+      <button (click)="resetUsername()" [disabled]="!username" class="btn btn-primary">Update username</button>
+    </p>
+
+    <p>Typing</p>
+
+    <p>
+    {{ username }}
+    </p>
+
+  </div>
+</div>

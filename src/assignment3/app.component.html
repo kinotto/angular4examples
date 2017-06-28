@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>I'm in the AppComponent!</h3>
+      <hr>
+      <button>Display details</button>
+      <p *ngIf="showParagraph">Secret password. Tuna!</p>
+      <div [ngStyle]="{'background-color': i > 4 ? 'red' : 'transparent' }"
+        *ngFor="let timestamp of timestamps; let i = index;">{{ timestamp }}</div>
+    </div>
+
+  </div>
+</div>
