@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-xs-2 beer_thumb" *ngFor="let beer of beers" >
+    <div class="media" [routerLink]="['/beer', beer.id]" style="cursor: pointer">
+      <div class="media-left">
+          <img [src]="beer.image_url" style="height: 100px" alt="">
+      </div>
+      <div class="media-body">
+        <div class="media-heading">
+          {{ beer.name }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<!--{{ beer | json }}-->
+<header></header>
+<div *ngIf="beer" class="row">
+  <div class="col-xs-6">
+    <img src="{{ beer.image_url }}" alt="" class=" beer_img" />
+  </div>
+  <div class="col-xs-6">
+    <h3>{{ beer.name }} beer</h3>
+    <h5>{{ beer.description }}</h5>
+    <h4>Ingredients:</h4>
+    <ul>
+      <li *ngFor="let key of ingredients()">{{ key }}</li>
+    </ul>
+  </div>
+</div>
