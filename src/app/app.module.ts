@@ -6,21 +6,15 @@ import { HeaderComponent } from './header/header.component';
 import { ApiService } from './api.service';
 import { HttpModule } from '@angular/http';
 import { HomeComponent } from './home/home.component';
-import { RouterModule, Routes } from '@angular/router';
-
-const routes: Routes = [
-  {path: '', component: HomeComponent},
-  {path: 'beer/:id', component: BeerComponent}
-]
+import { RouterCustomModule } from './router.module';
 
 @NgModule({
   declarations: [BeerComponent, HomeComponent, AppComponent, HeaderComponent],
   imports: [
     BrowserModule,
     HttpModule,
-    RouterModule.forRoot(routes)
+    RouterCustomModule
   ],
-  exports: [RouterModule],
   providers: [ApiService],
   bootstrap: [AppComponent]
 })
